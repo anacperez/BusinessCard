@@ -1,0 +1,431 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		020B20501DDA6D1D000F8189 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 020B204F1DDA6D1D000F8189 /* Main.storyboard */; };
+		020B20531DDA76DB000F8189 /* ConnectionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020B20511DDA76DB000F8189 /* ConnectionsTableViewController.swift */; };
+		020B20541DDA76DB000F8189 /* ConnectionsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 020B20521DDA76DB000F8189 /* ConnectionsTableViewController.xib */; };
+		020B20561DDA7793000F8189 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020B20551DDA7793000F8189 /* Card.swift */; };
+		020B20581DDA7B6D000F8189 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020B20571DDA7B6D000F8189 /* SampleData.swift */; };
+		02BDEB1A1DD98D450020A79B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BDEB191DD98D450020A79B /* AppDelegate.swift */; };
+		02BDEB1C1DD98D450020A79B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BDEB1B1DD98D450020A79B /* ViewController.swift */; };
+		02BDEB211DD98D450020A79B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02BDEB201DD98D450020A79B /* Assets.xcassets */; };
+		02BDEB241DD98D450020A79B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02BDEB221DD98D450020A79B /* LaunchScreen.storyboard */; };
+		02BDEB2F1DD98D450020A79B /* GojiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BDEB2E1DD98D450020A79B /* GojiTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		02BDEB2B1DD98D450020A79B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 02BDEB0E1DD98D450020A79B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 02BDEB151DD98D450020A79B;
+			remoteInfo = Goji;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		020B204F1DDA6D1D000F8189 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		020B20511DDA76DB000F8189 /* ConnectionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionsTableViewController.swift; sourceTree = "<group>"; };
+		020B20521DDA76DB000F8189 /* ConnectionsTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConnectionsTableViewController.xib; sourceTree = "<group>"; };
+		020B20551DDA7793000F8189 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		020B20571DDA7B6D000F8189 /* SampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		02BDEB161DD98D450020A79B /* Goji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Goji.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		02BDEB191DD98D450020A79B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		02BDEB1B1DD98D450020A79B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		02BDEB201DD98D450020A79B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		02BDEB231DD98D450020A79B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		02BDEB251DD98D450020A79B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02BDEB2A1DD98D450020A79B /* GojiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GojiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		02BDEB2E1DD98D450020A79B /* GojiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GojiTests.swift; sourceTree = "<group>"; };
+		02BDEB301DD98D450020A79B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		02BDEB131DD98D450020A79B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02BDEB271DD98D450020A79B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		02BDEB0D1DD98D450020A79B = {
+			isa = PBXGroup;
+			children = (
+				02BDEB181DD98D450020A79B /* Goji */,
+				02BDEB2D1DD98D450020A79B /* GojiTests */,
+				02BDEB171DD98D450020A79B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		02BDEB171DD98D450020A79B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				02BDEB161DD98D450020A79B /* Goji.app */,
+				02BDEB2A1DD98D450020A79B /* GojiTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		02BDEB181DD98D450020A79B /* Goji */ = {
+			isa = PBXGroup;
+			children = (
+				02BDEB191DD98D450020A79B /* AppDelegate.swift */,
+				02BDEB1B1DD98D450020A79B /* ViewController.swift */,
+				020B204F1DDA6D1D000F8189 /* Main.storyboard */,
+				020B20551DDA7793000F8189 /* Card.swift */,
+				020B20571DDA7B6D000F8189 /* SampleData.swift */,
+				020B20511DDA76DB000F8189 /* ConnectionsTableViewController.swift */,
+				020B20521DDA76DB000F8189 /* ConnectionsTableViewController.xib */,
+				02BDEB201DD98D450020A79B /* Assets.xcassets */,
+				02BDEB221DD98D450020A79B /* LaunchScreen.storyboard */,
+				02BDEB251DD98D450020A79B /* Info.plist */,
+			);
+			path = Goji;
+			sourceTree = "<group>";
+		};
+		02BDEB2D1DD98D450020A79B /* GojiTests */ = {
+			isa = PBXGroup;
+			children = (
+				02BDEB2E1DD98D450020A79B /* GojiTests.swift */,
+				02BDEB301DD98D450020A79B /* Info.plist */,
+			);
+			path = GojiTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		02BDEB151DD98D450020A79B /* Goji */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02BDEB331DD98D450020A79B /* Build configuration list for PBXNativeTarget "Goji" */;
+			buildPhases = (
+				02BDEB121DD98D450020A79B /* Sources */,
+				02BDEB131DD98D450020A79B /* Frameworks */,
+				02BDEB141DD98D450020A79B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Goji;
+			productName = Goji;
+			productReference = 02BDEB161DD98D450020A79B /* Goji.app */;
+			productType = "com.apple.product-type.application";
+		};
+		02BDEB291DD98D450020A79B /* GojiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02BDEB361DD98D450020A79B /* Build configuration list for PBXNativeTarget "GojiTests" */;
+			buildPhases = (
+				02BDEB261DD98D450020A79B /* Sources */,
+				02BDEB271DD98D450020A79B /* Frameworks */,
+				02BDEB281DD98D450020A79B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				02BDEB2C1DD98D450020A79B /* PBXTargetDependency */,
+			);
+			name = GojiTests;
+			productName = GojiTests;
+			productReference = 02BDEB2A1DD98D450020A79B /* GojiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		02BDEB0E1DD98D450020A79B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = Anae;
+				TargetAttributes = {
+					02BDEB151DD98D450020A79B = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
+					02BDEB291DD98D450020A79B = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 02BDEB151DD98D450020A79B;
+					};
+				};
+			};
+			buildConfigurationList = 02BDEB111DD98D450020A79B /* Build configuration list for PBXProject "Goji" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 02BDEB0D1DD98D450020A79B;
+			productRefGroup = 02BDEB171DD98D450020A79B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				02BDEB151DD98D450020A79B /* Goji */,
+				02BDEB291DD98D450020A79B /* GojiTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		02BDEB141DD98D450020A79B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				020B20501DDA6D1D000F8189 /* Main.storyboard in Resources */,
+				020B20541DDA76DB000F8189 /* ConnectionsTableViewController.xib in Resources */,
+				02BDEB241DD98D450020A79B /* LaunchScreen.storyboard in Resources */,
+				02BDEB211DD98D450020A79B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02BDEB281DD98D450020A79B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		02BDEB121DD98D450020A79B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02BDEB1C1DD98D450020A79B /* ViewController.swift in Sources */,
+				02BDEB1A1DD98D450020A79B /* AppDelegate.swift in Sources */,
+				020B20531DDA76DB000F8189 /* ConnectionsTableViewController.swift in Sources */,
+				020B20581DDA7B6D000F8189 /* SampleData.swift in Sources */,
+				020B20561DDA7793000F8189 /* Card.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02BDEB261DD98D450020A79B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02BDEB2F1DD98D450020A79B /* GojiTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		02BDEB2C1DD98D450020A79B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 02BDEB151DD98D450020A79B /* Goji */;
+			targetProxy = 02BDEB2B1DD98D450020A79B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		02BDEB221DD98D450020A79B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				02BDEB231DD98D450020A79B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		02BDEB311DD98D450020A79B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		02BDEB321DD98D450020A79B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		02BDEB341DD98D450020A79B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Goji/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.anae.Goji;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		02BDEB351DD98D450020A79B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Goji/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.anae.Goji;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		02BDEB371DD98D450020A79B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GojiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.anae.GojiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Goji.app/Goji";
+			};
+			name = Debug;
+		};
+		02BDEB381DD98D450020A79B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GojiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.anae.GojiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Goji.app/Goji";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		02BDEB111DD98D450020A79B /* Build configuration list for PBXProject "Goji" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02BDEB311DD98D450020A79B /* Debug */,
+				02BDEB321DD98D450020A79B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		02BDEB331DD98D450020A79B /* Build configuration list for PBXNativeTarget "Goji" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02BDEB341DD98D450020A79B /* Debug */,
+				02BDEB351DD98D450020A79B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		02BDEB361DD98D450020A79B /* Build configuration list for PBXNativeTarget "GojiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02BDEB371DD98D450020A79B /* Debug */,
+				02BDEB381DD98D450020A79B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 02BDEB0E1DD98D450020A79B /* Project object */;
+}
