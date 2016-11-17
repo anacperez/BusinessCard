@@ -9,8 +9,11 @@
 import UIKit
 
 class Card {
-    var first: String
-    var last: String
+    var cardId: String
+    var ownerId: String
+    var title: String
+    var first: String?
+    var last: String?
     var company: String?
     var phone: String?
     var email: String?
@@ -19,9 +22,12 @@ class Card {
     var job: String?
     var other: String?
     
-    init(first: String, last: String, company: String?, phone: String?,
+    init(cardId: String, ownerId: String, title: String, first: String?, last: String?, company: String?, phone: String?,
          email: String?, address: String?, site: String?, job: String?,
          other: String?) {
+        self.cardId = cardId
+        self.ownerId = ownerId
+        self.title = title
         self.first = first
         self.last = last
         self.company = company
