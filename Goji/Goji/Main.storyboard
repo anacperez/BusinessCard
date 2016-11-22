@@ -129,11 +129,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CardCell" rowHeight="60" id="I0S-4X-GrB">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CardCell" rowHeight="60" id="I0S-4X-GrB" customClass="CardCell" customModule="Goji" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="I0S-4X-GrB" id="dsb-z6-LBD">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="59.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="59"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Wws-e3-m7l">
@@ -175,6 +175,11 @@
                                         <constraint firstItem="Wws-e3-m7l" firstAttribute="leading" secondItem="dsb-z6-LBD" secondAttribute="leading" constant="20" id="flm-NQ-dge"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="emailLabel" destination="Sa1-L2-M1a" id="GfQ-dl-IZe"/>
+                                    <outlet property="firstNameLabel" destination="Yhf-ru-bRz" id="nBd-3T-kq6"/>
+                                    <outlet property="ratingImageView" destination="22r-cH-8yJ" id="phu-x5-cVy"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -318,7 +323,6 @@
         <!--Navigation Controller-->
         <scene sceneID="hDe-5e-EWi">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="c2Q-4e-DFa" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ylh-Fo-G7o" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5h5-zX-rcX">
@@ -330,6 +334,7 @@
                         <segue destination="WKW-Rx-9zQ" kind="relationship" relationship="rootViewController" id="WzW-rz-L7B"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c2Q-4e-DFa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="105" y="-269"/>
         </scene>

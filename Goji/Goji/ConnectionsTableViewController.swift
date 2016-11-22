@@ -39,26 +39,13 @@ class ConnectionsTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CardCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CardCell", for: indexPath) as! CardCell
 
         let card = connections[indexPath.row] as Card
-        
-        if let firstNameLabel = cell.viewWithTag(100) as? UILabel {
-            firstNameLabel.text = card.first
-        }
-        if let emailLabel = cell.viewWithTag(101) as? UILabel {
-            emailLabel.text = card.email
-        }
-        if let ratingImageView = cell.viewWithTag(102) as? UIImageView {
-            ratingImageView.image = self.imageForRating(rating: 5)
-        }
+        cell.card = card
+    
 
         return cell
-    }
- 
-    func imageForRating(rating:Int) -> UIImage? {
-        let imageName = "\(rating)Stars"
-        return UIImage(named: imageName)
     }
     
 

@@ -12,6 +12,7 @@
 		020B20541DDA76DB000F8189 /* ConnectionsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 020B20521DDA76DB000F8189 /* ConnectionsTableViewController.xib */; };
 		020B20561DDA7793000F8189 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020B20551DDA7793000F8189 /* Card.swift */; };
 		020B20581DDA7B6D000F8189 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020B20571DDA7B6D000F8189 /* SampleData.swift */; };
+		023B38251DDE997700F0BCA3 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023B38241DDE997700F0BCA3 /* CardCell.swift */; };
 		02BDEB1A1DD98D450020A79B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BDEB191DD98D450020A79B /* AppDelegate.swift */; };
 		02BDEB1C1DD98D450020A79B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BDEB1B1DD98D450020A79B /* ViewController.swift */; };
 		02BDEB211DD98D450020A79B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02BDEB201DD98D450020A79B /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 		020B20521DDA76DB000F8189 /* ConnectionsTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConnectionsTableViewController.xib; sourceTree = "<group>"; };
 		020B20551DDA7793000F8189 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		020B20571DDA7B6D000F8189 /* SampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		023B38241DDE997700F0BCA3 /* CardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardCell.swift; path = ../CardCell.swift; sourceTree = "<group>"; };
 		02BDEB161DD98D450020A79B /* Goji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Goji.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02BDEB191DD98D450020A79B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02BDEB1B1DD98D450020A79B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 		02BDEB181DD98D450020A79B /* Goji */ = {
 			isa = PBXGroup;
 			children = (
+				023B38241DDE997700F0BCA3 /* CardCell.swift */,
 				02BDEB191DD98D450020A79B /* AppDelegate.swift */,
 				02BDEB1B1DD98D450020A79B /* ViewController.swift */,
 				020B204F1DDA6D1D000F8189 /* Main.storyboard */,
@@ -217,6 +220,7 @@
 				020B20531DDA76DB000F8189 /* ConnectionsTableViewController.swift in Sources */,
 				020B20581DDA7B6D000F8189 /* SampleData.swift in Sources */,
 				020B20561DDA7793000F8189 /* Card.swift in Sources */,
+				023B38251DDE997700F0BCA3 /* CardCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
