@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		020152D51DE62C9300DD0EA8 /* CardDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020152D41DE62C9300DD0EA8 /* CardDetailsTableViewController.swift */; };
+		020152D91DE62EEE00DD0EA8 /* MyCardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020152D81DE62EEE00DD0EA8 /* MyCardsViewController.swift */; };
+		020152DB1DE6303500DD0EA8 /* MyCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020152DA1DE6303500DD0EA8 /* MyCardCell.swift */; };
 		020B20501DDA6D1D000F8189 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 020B204F1DDA6D1D000F8189 /* Main.storyboard */; };
 		020B20531DDA76DB000F8189 /* ConnectionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020B20511DDA76DB000F8189 /* ConnectionsTableViewController.swift */; };
 		020B20541DDA76DB000F8189 /* ConnectionsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 020B20521DDA76DB000F8189 /* ConnectionsTableViewController.xib */; };
@@ -14,7 +17,6 @@
 		020B20581DDA7B6D000F8189 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020B20571DDA7B6D000F8189 /* SampleData.swift */; };
 		023B38251DDE997700F0BCA3 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023B38241DDE997700F0BCA3 /* CardCell.swift */; };
 		02BDEB1A1DD98D450020A79B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BDEB191DD98D450020A79B /* AppDelegate.swift */; };
-		02BDEB1C1DD98D450020A79B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BDEB1B1DD98D450020A79B /* ViewController.swift */; };
 		02BDEB211DD98D450020A79B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02BDEB201DD98D450020A79B /* Assets.xcassets */; };
 		02BDEB241DD98D450020A79B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02BDEB221DD98D450020A79B /* LaunchScreen.storyboard */; };
 		02BDEB2F1DD98D450020A79B /* GojiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BDEB2E1DD98D450020A79B /* GojiTests.swift */; };
@@ -31,6 +33,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		020152D41DE62C9300DD0EA8 /* CardDetailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardDetailsTableViewController.swift; sourceTree = "<group>"; };
+		020152D81DE62EEE00DD0EA8 /* MyCardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyCardsViewController.swift; path = ../MyCardsViewController.swift; sourceTree = "<group>"; };
+		020152DA1DE6303500DD0EA8 /* MyCardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCardCell.swift; sourceTree = "<group>"; };
 		020B204F1DDA6D1D000F8189 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		020B20511DDA76DB000F8189 /* ConnectionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionsTableViewController.swift; sourceTree = "<group>"; };
 		020B20521DDA76DB000F8189 /* ConnectionsTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConnectionsTableViewController.xib; sourceTree = "<group>"; };
@@ -39,7 +44,6 @@
 		023B38241DDE997700F0BCA3 /* CardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardCell.swift; path = ../CardCell.swift; sourceTree = "<group>"; };
 		02BDEB161DD98D450020A79B /* Goji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Goji.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02BDEB191DD98D450020A79B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		02BDEB1B1DD98D450020A79B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		02BDEB201DD98D450020A79B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02BDEB231DD98D450020A79B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		02BDEB251DD98D450020A79B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -87,10 +91,11 @@
 		02BDEB181DD98D450020A79B /* Goji */ = {
 			isa = PBXGroup;
 			children = (
+				020152D81DE62EEE00DD0EA8 /* MyCardsViewController.swift */,
 				023B38241DDE997700F0BCA3 /* CardCell.swift */,
 				02BDEB191DD98D450020A79B /* AppDelegate.swift */,
-				02BDEB1B1DD98D450020A79B /* ViewController.swift */,
 				020B204F1DDA6D1D000F8189 /* Main.storyboard */,
+				020152D41DE62C9300DD0EA8 /* CardDetailsTableViewController.swift */,
 				020B20551DDA7793000F8189 /* Card.swift */,
 				020B20571DDA7B6D000F8189 /* SampleData.swift */,
 				020B20511DDA76DB000F8189 /* ConnectionsTableViewController.swift */,
@@ -98,6 +103,7 @@
 				02BDEB201DD98D450020A79B /* Assets.xcassets */,
 				02BDEB221DD98D450020A79B /* LaunchScreen.storyboard */,
 				02BDEB251DD98D450020A79B /* Info.plist */,
+				020152DA1DE6303500DD0EA8 /* MyCardCell.swift */,
 			);
 			path = Goji;
 			sourceTree = "<group>";
@@ -215,11 +221,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02BDEB1C1DD98D450020A79B /* ViewController.swift in Sources */,
+				020152D91DE62EEE00DD0EA8 /* MyCardsViewController.swift in Sources */,
 				02BDEB1A1DD98D450020A79B /* AppDelegate.swift in Sources */,
 				020B20531DDA76DB000F8189 /* ConnectionsTableViewController.swift in Sources */,
+				020152DB1DE6303500DD0EA8 /* MyCardCell.swift in Sources */,
 				020B20581DDA7B6D000F8189 /* SampleData.swift in Sources */,
 				020B20561DDA7793000F8189 /* Card.swift in Sources */,
+				020152D51DE62C9300DD0EA8 /* CardDetailsTableViewController.swift in Sources */,
 				023B38251DDE997700F0BCA3 /* CardCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
