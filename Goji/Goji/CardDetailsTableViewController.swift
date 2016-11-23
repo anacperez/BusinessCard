@@ -10,10 +10,13 @@ import UIKit
 
 class CardDetailsTableViewController: UITableViewController {
 
+    @IBOutlet weak var generateButton: UIButton!
+    @IBOutlet weak var imageQRCode: UIImageView!
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var firstNameTextField: UITextField!
     
-    var card:Card?
+    var card: Card?
+    var qrCodeImage: CIImage!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +46,43 @@ class CardDetailsTableViewController: UITableViewController {
     }
     
 
+    @IBAction func performGenerateButton(_ sender: Any) {
+        if qrCodeImage == nil {
+            if titleTextField.text == "" || firstNameTextField.text == "" {
+                return
+            }
+            
+            let data = titleTextField.text?.data(using: String.Encoding.isoLatin1, allowLossyConversion: false)
+            
+            let filter = CIFilter(name: "CIQRCodeGenerator")
+            
+            filter?.setValue(data, forKey: "inputMessage")
+            filter?.setValue("Q", forKey: "inputCorrectionLevel")
+            
+            qrCodeImage = filter?.outputImage
+            
+            displayQRCodeImage()
+            
+            titleTextField.resignFirstResponder()
+            
+            generateButton.setTitle("Clear", for: UIControlState.normal)
+            
+        }
+        else {
+            imageQRCode.image = nil
+            qrCodeImage = nil
+            generateButton.setTitle("Generate", for: UIControlState.normal)
+        }
+    }
+    
+    func displayQRCodeImage() {
+        let scaleX = imageQRCode.frame.size.width / qrCodeImage.extent.size.width
+        let scaleY = imageQRCode.frame.size.height / qrCodeImage.extent.size.height
+        
+        let transformedImage = qrCodeImage.applying(CGAffineTransform(scaleX: scaleX, y: scaleY))
+        
+        imageQRCode.image = UIImage(ciImage: transformedImage)
+    }
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
