@@ -14,6 +14,14 @@ class CardDetailsTableViewController: UITableViewController {
     @IBOutlet weak var imageQRCode: UIImageView!
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var firstNameTextField: UITextField!
+    @IBOutlet weak var lastNameTextField: UITextField!
+    @IBOutlet weak var companyNameTextField: UITextField!
+    @IBOutlet weak var phoneNumberTextField: UITextField!
+    @IBOutlet weak var emailAddressTextField: UITextField!
+    @IBOutlet weak var streetAddressTextField: UITextField!
+    @IBOutlet weak var siteUrlTextField: UITextField!
+    @IBOutlet weak var jobTitleTextField: UITextField!
+    @IBOutlet weak var otherTextField: UITextField!
     
     var card: Card?
     var qrCodeImage: CIImage!
@@ -41,14 +49,35 @@ class CardDetailsTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "SaveCardDetail" {
-            card = Card(cardId: "12345", ownerId: "54321", title: titleTextField.text!, first: firstNameTextField.text!, last: "", company: "", phone: "", email: "", address: "", site: "", job: "", other: "" )
+            var firstName: String?
+            var lastName: String?
+            var companyName: String?
+            var phoneNumber: String?
+            var emailAddress: String?
+            var streetAddress: String?
+            var siteUrl: String?
+            var jobTitle: String?
+            var other: String?
+            
+            if firstNameTextField.text == nil { firstName = "" }
+            if lastNameTextField.text == nil { lastName = "" }
+            if companyNameTextField.text == nil { companyName = "" }
+            if phoneNumberTextField.text == nil { phoneNumber = "" }
+            if emailAddressTextField.text == nil { emailAddress = "" }
+            if streetAddressTextField.text == nil { streetAddress = "" }
+            if siteUrlTextField.text == nil { siteUrl = "" }
+            if jobTitleTextField.text == nil { jobTitle = "" }
+            if otherTextField.text == nil { other = "" }
+
+            
+            card = Card(cardId: "12345", ownerId: "54321", title: titleTextField.text!, first: firstName, last: lastName, company: companyName, phone: phoneNumber, email: emailAddress, address: streetAddress, site: siteUrl, job: jobTitle, other: other)
         }
     }
     
 
     @IBAction func performGenerateButton(_ sender: Any) {
         if qrCodeImage == nil {
-            if titleTextField.text == "" || firstNameTextField.text == "" {
+            if titleTextField.text == "" {
                 return
             }
             
@@ -83,6 +112,7 @@ class CardDetailsTableViewController: UITableViewController {
         
         imageQRCode.image = UIImage(ciImage: transformedImage)
     }
+    
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
