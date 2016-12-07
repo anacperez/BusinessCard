@@ -100,14 +100,41 @@ class MyCardsViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+
+        if(segue.identifier == "MyCardCell") {
+            let destination = segue.destination as? CardDetailsTableViewController
+            let cell = sender as! MyCardCell
+            let selectedRow = tableView.indexPath(for: cell)!.row
+            
+            // Set the values to populate the text fields in CardDetailsTableView
+            let selectedCard = myCards[selectedRow]
+            destination!.cardId = selectedCard.cardId
+            destination!.cardTitle = selectedCard.title
+            destination!.ownerId = selectedCard.ownerId
+            destination!.firstName = selectedCard.first
+            destination!.lastName = selectedCard.last
+            destination!.companyName = selectedCard.company
+            destination!.phoneNumber = selectedCard.phone
+            destination!.emailAddress = selectedCard.email
+            destination!.streetAddress = selectedCard.address
+            destination!.jobTitle = selectedCard.job
+            destination!.siteUrl = selectedCard.site
+            destination!.other = selectedCard.other
+            
+            // TODO: Find out if there is a better way to do this
+            // Set isNew to false since we are not adding a new card
+            destination!.isNew = false
+        } else if(segue.identifier == "AddCard") {
+            
+        }
+
     }
-    */
+    
+    
 
 }
