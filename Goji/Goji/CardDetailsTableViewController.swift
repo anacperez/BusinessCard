@@ -8,8 +8,9 @@
 
 import UIKit
 
-class CardDetailsTableViewController: UITableViewController {
+class CardDetailsTableViewController: UITableViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var generateButton: UIButton!
     @IBOutlet weak var imageQRCode: UIImageView!
     @IBOutlet weak var titleTextField: UITextField!
@@ -23,16 +24,55 @@ class CardDetailsTableViewController: UITableViewController {
     @IBOutlet weak var jobTitleTextField: UITextField!
     @IBOutlet weak var otherTextField: UITextField!
     
+    var cardId: String!
+    var ownerId: String!
+    var cardTitle: String!
+    var firstName: String?
+    var lastName: String?
+    var companyName: String?
+    var phoneNumber: String?
+    var emailAddress: String?
+    var streetAddress: String?
+    var siteUrl: String?
+    var jobTitle: String?
+    var other: String?
+    
+    var isNew: Bool
     var card: Card?
     var qrCodeImage: CIImage!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        titleTextField.text = cardTitle
+        firstNameTextField.text = firstName
+        lastNameTextField.text = lastName
+        companyNameTextField.text = companyName
+        phoneNumberTextField.text = phoneNumber
+        emailAddressTextField.text = emailAddress
+        streetAddressTextField.text = streetAddress
+        siteUrlTextField.text = siteUrl
+        jobTitleTextField.text = jobTitle
+        otherTextField.text = other
+        
+        titleTextField.delegate = self
+        firstNameTextField.delegate = self
+        lastNameTextField.delegate = self
+        companyNameTextField.delegate = self
+        phoneNumberTextField.delegate = self
+        emailAddressTextField.delegate = self
+        streetAddressTextField.delegate = self
+        siteUrlTextField.delegate = self
+        jobTitleTextField.delegate = self
+        otherTextField.delegate = self
+        
+        saveButton.isEnabled = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,30 +87,30 @@ class CardDetailsTableViewController: UITableViewController {
         }
     }
     
+    /*
+     * This function prepares to send the data back to the MyCardsViewController.
+     * It makes the sure that empty fields are replaced with the empty string.
+     */
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "SaveCardDetail" {
-            var firstName: String?
-            var lastName: String?
-            var companyName: String?
-            var phoneNumber: String?
-            var emailAddress: String?
-            var streetAddress: String?
-            var siteUrl: String?
-            var jobTitle: String?
-            var other: String?
             
-            if firstNameTextField.text == nil { firstName = "" }
-            if lastNameTextField.text == nil { lastName = "" }
-            if companyNameTextField.text == nil { companyName = "" }
-            if phoneNumberTextField.text == nil { phoneNumber = "" }
-            if emailAddressTextField.text == nil { emailAddress = "" }
-            if streetAddressTextField.text == nil { streetAddress = "" }
-            if siteUrlTextField.text == nil { siteUrl = "" }
-            if jobTitleTextField.text == nil { jobTitle = "" }
-            if otherTextField.text == nil { other = "" }
+            if(isNew == true) {
+                if firstNameTextField.text == nil { firstName = "" }
+                if lastNameTextField.text == nil { lastName = "" }
+                if companyNameTextField.text == nil { companyName = "" }
+                if phoneNumberTextField.text == nil { phoneNumber = "" }
+                if emailAddressTextField.text == nil { emailAddress = "" }
+                if streetAddressTextField.text == nil { streetAddress = "" }
+                if siteUrlTextField.text == nil { siteUrl = "" }
+                if jobTitleTextField.text == nil { jobTitle = "" }
+                if otherTextField.text == nil { other = "" }
 
+                
+                card = Card(cardId: cardId, ownerId: ownerId, title: cardTitle, first: firstName, last: lastName, company: companyName, phone: phoneNumber, email: emailAddress, address: streetAddress, site: siteUrl, job: jobTitle, other: other)
+            } else {
+                
+            }
             
-            card = Card(cardId: "12345", ownerId: "54321", title: titleTextField.text!, first: firstName, last: lastName, company: companyName, phone: phoneNumber, email: emailAddress, address: streetAddress, site: siteUrl, job: jobTitle, other: other)
         }
     }
     
@@ -112,6 +152,15 @@ class CardDetailsTableViewController: UITableViewController {
         
         imageQRCode.image = UIImage(ciImage: transformedImage)
     }
+    
+    func textField(_ textField: UITextField,
+                   shouldChangeCharactersIn range: NSRange,
+                   replacementString string: String) -> Bool {
+        saveButton.isEnabled = true
+        return true
+    }
+
+
     
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
