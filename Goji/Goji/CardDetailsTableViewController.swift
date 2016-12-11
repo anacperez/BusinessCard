@@ -37,7 +37,7 @@ class CardDetailsTableViewController: UITableViewController, UITextFieldDelegate
     var jobTitle: String?
     var other: String?
     
-    var isNew: Bool
+    var isNew: Bool!
     var card: Card?
     var qrCodeImage: CIImage!
     

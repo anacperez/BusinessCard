@@ -15,6 +15,11 @@
 		020B20541DDA76DB000F8189 /* ConnectionsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 020B20521DDA76DB000F8189 /* ConnectionsTableViewController.xib */; };
 		020B20561DDA7793000F8189 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020B20551DDA7793000F8189 /* Card.swift */; };
 		020B20581DDA7B6D000F8189 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020B20571DDA7B6D000F8189 /* SampleData.swift */; };
+		020B94881DFB5BD700C6F127 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 020B94871DFB5BD700C6F127 /* GoogleService-Info.plist */; };
+		020B948A1DFB5FD600C6F127 /* MeasurementHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020B94891DFB5FD600C6F127 /* MeasurementHelper.swift */; };
+		020B948C1DFB5FFA00C6F127 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020B948B1DFB5FFA00C6F127 /* AppState.swift */; };
+		020B948E1DFB602000C6F127 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020B948D1DFB602000C6F127 /* Constants.swift */; };
+		020B94901DFCEA0F00C6F127 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020B948F1DFCEA0F00C6F127 /* MenuViewController.swift */; };
 		023B38251DDE997700F0BCA3 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023B38241DDE997700F0BCA3 /* CardCell.swift */; };
 		02BCA0BE1DE661E3001C39F0 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BCA0BD1DE661E3001C39F0 /* ScanViewController.swift */; };
 		02BCA0C01DE67C7F001C39F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BCA0BF1DE67C7F001C39F0 /* ViewController.swift */; };
@@ -22,6 +27,7 @@
 		02BDEB211DD98D450020A79B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02BDEB201DD98D450020A79B /* Assets.xcassets */; };
 		02BDEB241DD98D450020A79B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02BDEB221DD98D450020A79B /* LaunchScreen.storyboard */; };
 		02BDEB2F1DD98D450020A79B /* GojiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BDEB2E1DD98D450020A79B /* GojiTests.swift */; };
+		B9AE3407F8A033177F1D1668 /* Pods_Goji.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88C349993CCA5A788AC7C1D /* Pods_Goji.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +49,12 @@
 		020B20521DDA76DB000F8189 /* ConnectionsTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConnectionsTableViewController.xib; sourceTree = "<group>"; };
 		020B20551DDA7793000F8189 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		020B20571DDA7B6D000F8189 /* SampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		020B94861DFB5AFC00C6F127 /* Goji.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Goji.entitlements; sourceTree = "<group>"; };
+		020B94871DFB5BD700C6F127 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		020B94891DFB5FD600C6F127 /* MeasurementHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeasurementHelper.swift; sourceTree = "<group>"; };
+		020B948B1DFB5FFA00C6F127 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		020B948D1DFB602000C6F127 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		020B948F1DFCEA0F00C6F127 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		023B38241DDE997700F0BCA3 /* CardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardCell.swift; path = ../CardCell.swift; sourceTree = "<group>"; };
 		02BCA0BD1DE661E3001C39F0 /* ScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
 		02BCA0BF1DE67C7F001C39F0 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +66,10 @@
 		02BDEB2A1DD98D450020A79B /* GojiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GojiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		02BDEB2E1DD98D450020A79B /* GojiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GojiTests.swift; sourceTree = "<group>"; };
 		02BDEB301DD98D450020A79B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73C965ECEDE612FDCD8D9D86 /* Pods_GojiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GojiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE73B34B13A519B95AEA15C9 /* Pods-Goji.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Goji.release.xcconfig"; path = "Pods/Target Support Files/Pods-Goji/Pods-Goji.release.xcconfig"; sourceTree = "<group>"; };
+		BB5EF82CD6CBCB88A6C25BE3 /* Pods-Goji.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Goji.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Goji/Pods-Goji.debug.xcconfig"; sourceTree = "<group>"; };
+		D88C349993CCA5A788AC7C1D /* Pods_Goji.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Goji.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9AE3407F8A033177F1D1668 /* Pods_Goji.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +97,8 @@
 				02BDEB181DD98D450020A79B /* Goji */,
 				02BDEB2D1DD98D450020A79B /* GojiTests */,
 				02BDEB171DD98D450020A79B /* Products */,
+				474DDD3FEFC87FD6B770E3DC /* Pods */,
+				73A4E66131304505ABC0F872 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,21 +114,27 @@
 		02BDEB181DD98D450020A79B /* Goji */ = {
 			isa = PBXGroup;
 			children = (
+				020B94861DFB5AFC00C6F127 /* Goji.entitlements */,
 				020152D81DE62EEE00DD0EA8 /* MyCardsViewController.swift */,
 				023B38241DDE997700F0BCA3 /* CardCell.swift */,
 				02BDEB191DD98D450020A79B /* AppDelegate.swift */,
 				020B204F1DDA6D1D000F8189 /* Main.storyboard */,
+				020B948F1DFCEA0F00C6F127 /* MenuViewController.swift */,
 				020152D41DE62C9300DD0EA8 /* CardDetailsTableViewController.swift */,
 				020B20551DDA7793000F8189 /* Card.swift */,
 				020B20571DDA7B6D000F8189 /* SampleData.swift */,
 				020B20511DDA76DB000F8189 /* ConnectionsTableViewController.swift */,
 				020B20521DDA76DB000F8189 /* ConnectionsTableViewController.xib */,
+				020B94871DFB5BD700C6F127 /* GoogleService-Info.plist */,
 				02BDEB201DD98D450020A79B /* Assets.xcassets */,
 				02BDEB221DD98D450020A79B /* LaunchScreen.storyboard */,
 				02BDEB251DD98D450020A79B /* Info.plist */,
 				020152DA1DE6303500DD0EA8 /* MyCardCell.swift */,
 				02BCA0BD1DE661E3001C39F0 /* ScanViewController.swift */,
 				02BCA0BF1DE67C7F001C39F0 /* ViewController.swift */,
+				020B94891DFB5FD600C6F127 /* MeasurementHelper.swift */,
+				020B948B1DFB5FFA00C6F127 /* AppState.swift */,
+				020B948D1DFB602000C6F127 /* Constants.swift */,
 			);
 			path = Goji;
 			sourceTree = "<group>";
@@ -123,6 +148,24 @@
 			path = GojiTests;
 			sourceTree = "<group>";
 		};
+		474DDD3FEFC87FD6B770E3DC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BB5EF82CD6CBCB88A6C25BE3 /* Pods-Goji.debug.xcconfig */,
+				AE73B34B13A519B95AEA15C9 /* Pods-Goji.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		73A4E66131304505ABC0F872 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D88C349993CCA5A788AC7C1D /* Pods_Goji.framework */,
+				73C965ECEDE612FDCD8D9D86 /* Pods_GojiTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -130,9 +173,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 02BDEB331DD98D450020A79B /* Build configuration list for PBXNativeTarget "Goji" */;
 			buildPhases = (
+				4BE487378B4175F7B692F4D6 /* [CP] Check Pods Manifest.lock */,
 				02BDEB121DD98D450020A79B /* Sources */,
 				02BDEB131DD98D450020A79B /* Frameworks */,
 				02BDEB141DD98D450020A79B /* Resources */,
+				01C59561D8F5584366CDCFD6 /* [CP] Embed Pods Frameworks */,
+				AE2FA6B4F6BE79D7B1C49748 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -175,6 +221,11 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = NN6AWTQK6C;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					02BDEB291DD98D450020A79B = {
 						CreatedOnToolsVersion = 8.1;
@@ -209,6 +260,7 @@
 			files = (
 				020B20501DDA6D1D000F8189 /* Main.storyboard in Resources */,
 				020B20541DDA76DB000F8189 /* ConnectionsTableViewController.xib in Resources */,
+				020B94881DFB5BD700C6F127 /* GoogleService-Info.plist in Resources */,
 				02BDEB241DD98D450020A79B /* LaunchScreen.storyboard in Resources */,
 				02BDEB211DD98D450020A79B /* Assets.xcassets in Resources */,
 			);
@@ -223,6 +275,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		01C59561D8F5584366CDCFD6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Goji/Pods-Goji-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4BE487378B4175F7B692F4D6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AE2FA6B4F6BE79D7B1C49748 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Goji/Pods-Goji-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		02BDEB121DD98D450020A79B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -231,11 +331,15 @@
 				02BCA0C01DE67C7F001C39F0 /* ViewController.swift in Sources */,
 				020152D91DE62EEE00DD0EA8 /* MyCardsViewController.swift in Sources */,
 				02BDEB1A1DD98D450020A79B /* AppDelegate.swift in Sources */,
+				020B94901DFCEA0F00C6F127 /* MenuViewController.swift in Sources */,
 				020B20531DDA76DB000F8189 /* ConnectionsTableViewController.swift in Sources */,
 				020152DB1DE6303500DD0EA8 /* MyCardCell.swift in Sources */,
 				020B20581DDA7B6D000F8189 /* SampleData.swift in Sources */,
 				020B20561DDA7793000F8189 /* Card.swift in Sources */,
+				020B948A1DFB5FD600C6F127 /* MeasurementHelper.swift in Sources */,
 				020152D51DE62C9300DD0EA8 /* CardDetailsTableViewController.swift in Sources */,
+				020B948C1DFB5FFA00C6F127 /* AppState.swift in Sources */,
+				020B948E1DFB602000C6F127 /* Constants.swift in Sources */,
 				023B38251DDE997700F0BCA3 /* CardCell.swift in Sources */,
 				02BCA0BE1DE661E3001C39F0 /* ScanViewController.swift in Sources */,
 			);
@@ -289,6 +393,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -339,6 +444,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -366,8 +472,10 @@
 		};
 		02BDEB341DD98D450020A79B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB5EF82CD6CBCB88A6C25BE3 /* Pods-Goji.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Goji/Goji.entitlements;
 				DEVELOPMENT_TEAM = NN6AWTQK6C;
 				INFOPLIST_FILE = Goji/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
@@ -380,8 +488,10 @@
 		};
 		02BDEB351DD98D450020A79B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE73B34B13A519B95AEA15C9 /* Pods-Goji.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Goji/Goji.entitlements;
 				DEVELOPMENT_TEAM = NN6AWTQK6C;
 				INFOPLIST_FILE = Goji/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;

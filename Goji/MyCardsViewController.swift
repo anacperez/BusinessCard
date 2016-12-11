@@ -47,7 +47,7 @@ class MyCardsViewController: UITableViewController {
         return cell
     }
     
-    @IBAction func cancelToPlayersViewController(segue:UIStoryboardSegue) {
+    @IBAction func cancelToMyCardsViewController(segue:UIStoryboardSegue) {
     }
     
     @IBAction func saveCardDetail(segue:UIStoryboardSegue) {
