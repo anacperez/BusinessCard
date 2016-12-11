@@ -6,11 +6,7 @@
 //  Copyright © 2016 Anae. All rights reserved.
 //
 
-import UIKit
-
 class Card {
-    var cardId: String
-    var ownerId: String
     var title: String
     var first: String?
     var last: String?
@@ -22,11 +18,9 @@ class Card {
     var job: String?
     var other: String?
     
-    init(cardId: String, ownerId: String, title: String, first: String?, last: String?, company: String?, phone: String?,
+    init(title: String, first: String?, last: String?, company: String?, phone: String?,
          email: String?, address: String?, site: String?, job: String?,
          other: String?) {
-        self.cardId = cardId
-        self.ownerId = ownerId
         self.title = title
         self.first = first
         self.last = last
@@ -38,5 +32,6 @@ class Card {
         self.job = job
         self.other = other
     }
+    
     
 }

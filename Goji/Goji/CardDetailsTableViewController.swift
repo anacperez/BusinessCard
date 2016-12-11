@@ -92,7 +92,7 @@ class CardDetailsTableViewController: UITableViewController, UITextFieldDelegate
      * It makes the sure that empty fields are replaced with the empty string.
      */
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "SaveCardDetail" {
+        if segue.identifier == Constants.Segues.SaveCardDetail {
             
             if(isNew == true) {
                 if firstNameTextField.text == nil { firstName = "" }
@@ -106,7 +106,7 @@ class CardDetailsTableViewController: UITableViewController, UITextFieldDelegate
                 if otherTextField.text == nil { other = "" }
 
                 
-                card = Card(cardId: cardId, ownerId: ownerId, title: cardTitle, first: firstName, last: lastName, company: companyName, phone: phoneNumber, email: emailAddress, address: streetAddress, site: siteUrl, job: jobTitle, other: other)
+                card = Card(title: cardTitle, first: firstName, last: lastName, company: companyName, phone: phoneNumber, email: emailAddress, address: streetAddress, site: siteUrl, job: jobTitle, other: other)
             } else {
                 
             }
