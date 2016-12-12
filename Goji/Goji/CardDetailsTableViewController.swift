@@ -8,8 +8,13 @@
 
 import UIKit
 
+import Firebase
+
 class CardDetailsTableViewController: UITableViewController, UITextFieldDelegate {
 
+    let ref = FIRDatabase.database().reference()
+    let userId = FIRAuth.auth()?.currentUser?.uid
+    
     @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var generateButton: UIButton!
     @IBOutlet weak var imageQRCode: UIImageView!
@@ -95,18 +100,36 @@ class CardDetailsTableViewController: UITableViewController, UITextFieldDelegate
         if segue.identifier == Constants.Segues.SaveCardDetail {
             
             if(isNew == true) {
-                if firstNameTextField.text == nil { firstName = "" }
-                if lastNameTextField.text == nil { lastName = "" }
-                if companyNameTextField.text == nil { companyName = "" }
-                if phoneNumberTextField.text == nil { phoneNumber = "" }
-                if emailAddressTextField.text == nil { emailAddress = "" }
-                if streetAddressTextField.text == nil { streetAddress = "" }
-                if siteUrlTextField.text == nil { siteUrl = "" }
-                if jobTitleTextField.text == nil { jobTitle = "" }
-                if otherTextField.text == nil { other = "" }
-
+                cardTitle = titleTextField.text
+                if cardTitle == nil { cardTitle = "" }
+                firstName = firstNameTextField.text
+                if firstName == nil { firstName = "" }
+                lastName = lastNameTextField.text
+                if lastName == nil { lastName = "" }
+                companyName = companyNameTextField.text
+                if companyName == nil { companyName = "" }
+                phoneNumber = phoneNumberTextField.text
+                if phoneNumber == nil { phoneNumber = "" }
+                emailAddress = emailAddressTextField.text
+                if emailAddress == nil { emailAddress = "" }
+                streetAddress = streetAddressTextField.text
+                if streetAddress == nil { streetAddress = "" }
+                siteUrl = siteUrlTextField.text
+                if siteUrl == nil { siteUrl = "" }
+                jobTitle = jobTitleTextField.text
+                if jobTitle == nil { jobTitle = "" }
+                other = otherTextField.text
+                if other == nil { other = "" }
                 
-                card = Card(title: cardTitle, first: firstName, last: lastName, company: companyName, phone: phoneNumber, email: emailAddress, address: streetAddress, site: siteUrl, job: jobTitle, other: other)
+                let cardRef = self.ref.child(Constants.TableNames.CARDS).childByAutoId()
+                cardId = cardRef.key
+                
+                card = Card(cardId: cardId, title: cardTitle, first: firstName, last: lastName, company: companyName, phone: phoneNumber, email: emailAddress, address: streetAddress, site: siteUrl, job: jobTitle, other: other)
+                
+                cardRef.setValue(card?.toAny())
+                
+                self.ref.child(Constants.TableNames.USERS).child(userId!).child(Constants.UserFields.created).child(cardId).setValue(true)
+
             } else {
                 
             }
@@ -121,7 +144,7 @@ class CardDetailsTableViewController: UITableViewController, UITextFieldDelegate
                 return
             }
             
-            let data = titleTextField.text?.data(using: String.Encoding.isoLatin1, allowLossyConversion: false)
+            let data = cardId.data(using: String.Encoding.isoLatin1, allowLossyConversion: false)
             
             let filter = CIFilter(name: "CIQRCodeGenerator")
             

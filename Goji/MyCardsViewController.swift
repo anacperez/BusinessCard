@@ -36,15 +36,15 @@ class MyCardsViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
         // Retrieves cardIds that the current user has created and populates the tableView
-        ref.child(Constants.TableNames.USERS).child(userID!).child(Constants.UserFields.created).observeSingleEvent(of: .value, with: { (snapshot) in
-
-            self.createdCardIds = snapshot.value as! [String]
-            print(snapshot.value as! [String])
-            self.retrieveCards()
-            
-        }) { (error) in
-            print(error.localizedDescription)
-        }
+        retrieveCreatedCardIds()
+        
+//        ref.child(Constants.TableNames.USERS).child(userID!).child(Constants.UserFields.created).observe(FIRDataEventType.value, with: { (snapshot) in
+//            let createdCardIds = snapshot.value as! NSDictionary
+//            self.createdCardIds = createdCardIds.allKeys as! [String]
+//            
+//            print(snapshot.value as! NSDictionary)
+//            self.retrieveCards()
+//        })
     }
     
     override func viewDidAppear(_  animated: Bool) {
@@ -52,9 +52,22 @@ class MyCardsViewController: UITableViewController {
         
     }
     
+    func retrieveCreatedCardIds() {
+        ref.child(Constants.TableNames.USERS).child(userID!).child(Constants.UserFields.created).observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            let createdCardIds = snapshot.value as! NSDictionary
+            self.createdCardIds = createdCardIds.allKeys as! [String]
+            
+            print(snapshot.value as! NSDictionary)
+            self.retrieveCards()
+            
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+    }
+    
     func retrieveCards() {
         for createdCardId in createdCardIds {
-
             let child = ref.child(Constants.TableNames.CARDS).child(createdCardId)
             child.observe(.value) { (snap: FIRDataSnapshot) in
                 print((snap.value as AnyObject))
@@ -62,10 +75,6 @@ class MyCardsViewController: UITableViewController {
                 self.tableView.insertRows(at: [IndexPath(row: self.myCards.count - 1, section: 0)], with: .automatic)
             }
         }
-    }
-    
-    func convertSnapshotToModel() {
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -99,10 +108,10 @@ class MyCardsViewController: UITableViewController {
         let other = cardSnapshotValue.object(forKey: Constants.CardFields.other) as! String
         let phone = cardSnapshotValue.object(forKey: Constants.CardFields.phone) as! String
         let site = cardSnapshotValue.object(forKey: Constants.CardFields.site) as! String
-
+        let cardId = createdCardIds[indexPath.row]
         cell.textLabel?.text = title
         
-        let card = Card(title: title, first: first, last: last, company: company, phone: phone, email: email, address: address, site: site, job: job, other: other)
+        let card = Card(cardId: cardId , title: title, first: first, last: last, company: company, phone: phone, email: email, address: address, site: site, job: job, other: other)
         
         cards.append(card)
         
@@ -131,9 +140,15 @@ class MyCardsViewController: UITableViewController {
     @IBAction func cancelToMyCardsViewController(segue:UIStoryboardSegue) {
     }
     
-//    @IBAction func saveCardDetail(segue:UIStoryboardSegue) {
-//        if let cardDetailsTableViewController = segue.source as? CardDetailsTableViewController {
-//            // Add the new card to the myCards array
+    @IBAction func saveCardDetail(segue:UIStoryboardSegue) {
+        if segue.source is CardDetailsTableViewController {
+            // Add the new card to the myCards array
+            
+            print(segue.identifier as String!)
+            DispatchQueue.main.async{
+                self.tableView.reloadData()
+            }
+
 //            if let card = cardDetailsTableViewController.card {
 //                myCards.append(card)
 //                
@@ -141,9 +156,9 @@ class MyCardsViewController: UITableViewController {
 //                let indexPath = IndexPath(row: myCards.count - 1, section: 0)
 //                tableView.insertRows(at: [indexPath], with: .automatic)
 //            }
-//            
-//        }
-//    }
+            
+        }
+    }
 
 
     /*
@@ -186,14 +201,15 @@ class MyCardsViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as? CardDetailsTableViewController
 
         if(segue.identifier == Constants.Segues.MyCardCell) {
-            let destination = segue.destination as? CardDetailsTableViewController
             let cell = sender as! MyCardCell
             let selectedRow = tableView.indexPath(for: cell)!.row
             
             // Set the values to populate the text fields in CardDetailsTableView
             let selectedCard = cards[selectedRow]
+            destination!.cardId = selectedCard.cardId
             destination!.cardTitle = selectedCard.title
             destination!.firstName = selectedCard.first
             destination!.lastName = selectedCard.last
@@ -208,7 +224,8 @@ class MyCardsViewController: UITableViewController {
             // TODO: Find out if there is a better way to do this
             // Set isNew to false since we are not adding a new card
             destination!.isNew = false
-        } else if(segue.identifier == "AddCard") {
+        } else if(segue.identifier == Constants.Segues.AddNewCard) {
+            destination!.isNew = true
             
         }
 

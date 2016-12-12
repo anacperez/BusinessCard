@@ -374,7 +374,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="c9w-RY-paT">
                             <connections>
-                                <segue destination="DCI-VR-Qer" kind="presentation" identifier="AddCard" id="hN7-yf-ZPF"/>
+                                <segue destination="aFV-Pg-e2u" kind="show" identifier="AddNewCard" id="2xF-vF-9Yj"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -807,6 +807,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="LYn-HY-aGs"/>
+        <segue reference="2xF-vF-9Yj"/>
     </inferredMetricsTieBreakers>
 </document>
