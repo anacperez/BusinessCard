@@ -18,6 +18,7 @@ struct Constants {
         static let MyCardCell = "MyCardCell"
         static let SaveCardDetail = "SaveCardDetail"
         static let AddNewCard = "AddNewCard"
+        static let CardDetails = "CardDetails"
     }
     
     struct CardFields {
