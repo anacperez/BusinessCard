@@ -27,7 +27,7 @@ class ConnectionsTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        print("HERE")
+
         retrieveConnectionsIds()
     }
 
@@ -39,12 +39,16 @@ class ConnectionsTableViewController: UITableViewController {
     func retrieveConnectionsIds() {
         ref.child(Constants.TableNames.USERS).child(userID!).child(Constants.UserFields.connections).observeSingleEvent(of: .value, with: { (snapshot) in
             
-            let connectionsIds = snapshot.value as! NSDictionary
-            print(connectionsIds)
-            self.connectionsIds = connectionsIds.allKeys as! [String]
-            print(snapshot.value as! NSDictionary)
-            self.retrieveCards()
+            let connectionsIds = snapshot.value as? NSDictionary
             
+            if(connectionsIds != nil) {
+                print(connectionsIds!)
+                self.connectionsIds = connectionsIds!.allKeys as! [String]
+                print(snapshot.value as! NSDictionary)
+                self.retrieveCards()
+            }
+            
+        
         }) { (error) in
             print(error.localizedDescription)
         }
@@ -90,7 +94,8 @@ class ConnectionsTableViewController: UITableViewController {
         let phone = cardSnapshotValue.object(forKey: Constants.CardFields.phone) as! String
         let site = cardSnapshotValue.object(forKey: Constants.CardFields.site) as! String
         let cardId = connectionsIds[indexPath.row]
-        cell.textLabel?.text = title
+
+        cell.textLabel?.text = first + " " + last
         
         let card = Card(cardId: cardId, title: title, first: first, last: last, company: company, phone: phone, email: email, address: address, site: site, job: job, other: other)
         
@@ -101,12 +106,13 @@ class ConnectionsTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let navigationController = segue.destination as! UINavigationController
+
 
         if(segue.identifier == Constants.Segues.CardDetails) {
+            let navigationController = segue.destination as! UINavigationController
             let destination = navigationController.topViewController as! ConnectionsDetailsViewController
 
-            let cell = sender as! CardCell
+            let cell = sender as! UITableViewCell /*as! CardCell*/
             let selectedRow = tableView.indexPath(for: cell)!.row
             
             // Set the values to populate the text fields in CardDetailsTableView
@@ -125,6 +131,9 @@ class ConnectionsTableViewController: UITableViewController {
             destination.other = selectedCard.other
         }
         
+    }
+    
+    @IBAction func backToConnectionsScene(segue:UIStoryboardSegue) {
     }
 
     /*

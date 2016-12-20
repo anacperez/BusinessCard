@@ -14,15 +14,12 @@
 		020B20531DDA76DB000F8189 /* ConnectionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020B20511DDA76DB000F8189 /* ConnectionsTableViewController.swift */; };
 		020B20541DDA76DB000F8189 /* ConnectionsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 020B20521DDA76DB000F8189 /* ConnectionsTableViewController.xib */; };
 		020B20561DDA7793000F8189 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020B20551DDA7793000F8189 /* Card.swift */; };
-		020B20581DDA7B6D000F8189 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020B20571DDA7B6D000F8189 /* SampleData.swift */; };
 		020B94881DFB5BD700C6F127 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 020B94871DFB5BD700C6F127 /* GoogleService-Info.plist */; };
 		020B948A1DFB5FD600C6F127 /* MeasurementHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020B94891DFB5FD600C6F127 /* MeasurementHelper.swift */; };
 		020B948C1DFB5FFA00C6F127 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020B948B1DFB5FFA00C6F127 /* AppState.swift */; };
 		020B948E1DFB602000C6F127 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020B948D1DFB602000C6F127 /* Constants.swift */; };
 		020B94901DFCEA0F00C6F127 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020B948F1DFCEA0F00C6F127 /* MenuViewController.swift */; };
 		022D67FE1DFDE90C00BBFF01 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022D67FD1DFDE90C00BBFF01 /* User.swift */; };
-		022D68001DFDF4FC00BBFF01 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022D67FF1DFDF4FC00BBFF01 /* UserService.swift */; };
-		022D68021DFDF57900BBFF01 /* UserDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022D68011DFDF57900BBFF01 /* UserDao.swift */; };
 		023B38251DDE997700F0BCA3 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023B38241DDE997700F0BCA3 /* CardCell.swift */; };
 		026228931E033C8F008FD24A /* ConnectionsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026228921E033C8F008FD24A /* ConnectionsDetailsViewController.swift */; };
 		02BCA0BE1DE661E3001C39F0 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BCA0BD1DE661E3001C39F0 /* ScanViewController.swift */; };
@@ -52,7 +49,6 @@
 		020B20511DDA76DB000F8189 /* ConnectionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionsTableViewController.swift; sourceTree = "<group>"; };
 		020B20521DDA76DB000F8189 /* ConnectionsTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConnectionsTableViewController.xib; sourceTree = "<group>"; };
 		020B20551DDA7793000F8189 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
-		020B20571DDA7B6D000F8189 /* SampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		020B94861DFB5AFC00C6F127 /* Goji.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Goji.entitlements; sourceTree = "<group>"; };
 		020B94871DFB5BD700C6F127 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		020B94891DFB5FD600C6F127 /* MeasurementHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeasurementHelper.swift; sourceTree = "<group>"; };
@@ -60,8 +56,6 @@
 		020B948D1DFB602000C6F127 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		020B948F1DFCEA0F00C6F127 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		022D67FD1DFDE90C00BBFF01 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		022D67FF1DFDF4FC00BBFF01 /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
-		022D68011DFDF57900BBFF01 /* UserDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDao.swift; sourceTree = "<group>"; };
 		023B38241DDE997700F0BCA3 /* CardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardCell.swift; path = ../CardCell.swift; sourceTree = "<group>"; };
 		026228921E033C8F008FD24A /* ConnectionsDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionsDetailsViewController.swift; sourceTree = "<group>"; };
 		02BCA0BD1DE661E3001C39F0 /* ScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
@@ -131,7 +125,6 @@
 				020152D41DE62C9300DD0EA8 /* CardDetailsTableViewController.swift */,
 				026228921E033C8F008FD24A /* ConnectionsDetailsViewController.swift */,
 				020B20551DDA7793000F8189 /* Card.swift */,
-				020B20571DDA7B6D000F8189 /* SampleData.swift */,
 				020B20511DDA76DB000F8189 /* ConnectionsTableViewController.swift */,
 				020B20521DDA76DB000F8189 /* ConnectionsTableViewController.xib */,
 				020B94871DFB5BD700C6F127 /* GoogleService-Info.plist */,
@@ -145,8 +138,6 @@
 				020B948B1DFB5FFA00C6F127 /* AppState.swift */,
 				020B948D1DFB602000C6F127 /* Constants.swift */,
 				022D67FD1DFDE90C00BBFF01 /* User.swift */,
-				022D67FF1DFDF4FC00BBFF01 /* UserService.swift */,
-				022D68011DFDF57900BBFF01 /* UserDao.swift */,
 			);
 			path = Goji;
 			sourceTree = "<group>";
@@ -344,17 +335,14 @@
 				026228931E033C8F008FD24A /* ConnectionsDetailsViewController.swift in Sources */,
 				020152D91DE62EEE00DD0EA8 /* MyCardsViewController.swift in Sources */,
 				02BDEB1A1DD98D450020A79B /* AppDelegate.swift in Sources */,
-				022D68021DFDF57900BBFF01 /* UserDao.swift in Sources */,
 				020B94901DFCEA0F00C6F127 /* MenuViewController.swift in Sources */,
 				020B20531DDA76DB000F8189 /* ConnectionsTableViewController.swift in Sources */,
 				020152DB1DE6303500DD0EA8 /* MyCardCell.swift in Sources */,
-				020B20581DDA7B6D000F8189 /* SampleData.swift in Sources */,
 				020B20561DDA7793000F8189 /* Card.swift in Sources */,
 				022D67FE1DFDE90C00BBFF01 /* User.swift in Sources */,
 				020B948A1DFB5FD600C6F127 /* MeasurementHelper.swift in Sources */,
 				020152D51DE62C9300DD0EA8 /* CardDetailsTableViewController.swift in Sources */,
 				020B948C1DFB5FFA00C6F127 /* AppState.swift in Sources */,
-				022D68001DFDF4FC00BBFF01 /* UserService.swift in Sources */,
 				020B948E1DFB602000C6F127 /* Constants.swift in Sources */,
 				023B38251DDE997700F0BCA3 /* CardCell.swift in Sources */,
 				02BCA0BE1DE661E3001C39F0 /* ScanViewController.swift in Sources */,

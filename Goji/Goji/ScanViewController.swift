@@ -8,14 +8,19 @@
 
 import UIKit
 import AVFoundation
+import Firebase
 
 class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
 
+    
+    let userId = FIRAuth.auth()?.currentUser?.uid
+    var ref = FIRDatabase.database().reference()
+    
     var captureSession: AVCaptureSession!
     var videoPreviewLayer: AVCaptureVideoPreviewLayer!
     var qrCodeFrameView: UIView!
     
-    @IBOutlet weak var messageLabel: UILabel!
+    var segueIdentifier: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,8 +45,7 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
             view.layer.addSublayer(videoPreviewLayer)
             
             captureSession?.startRunning()
-            
-            view.bringSubview(toFront: messageLabel)
+ 
             
             // Initialize QR code frame to highlight the QR code
             qrCodeFrameView = UIView()
@@ -65,37 +69,24 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
     }
     
     func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [Any]!, from connection: AVCaptureConnection!) {
-        // Check if the metadataObjects array is not nil and it contains at least one object
-        if metadataObjects == nil || metadataObjects.count == 0 {
-            qrCodeFrameView?.frame = CGRect.zero
-            messageLabel.text = "No QR code is detected"
-            return
+        print(" THIS METHOD")
+        captureSession.stopRunning()
+        if let metadataObject = metadataObjects.first {
+            let readableObject = metadataObject as! AVMetadataMachineReadableCodeObject
+            print("IN THIS METHODS IF")
+            AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
+            found(code: readableObject.stringValue);
         }
-        
-        // Get the metadata object
-        let metadataObject = metadataObjects[0] as! AVMetadataMachineReadableCodeObject
-        
-        if metadataObject.type == AVMetadataObjectTypeQRCode {
-            // If the found metadata is equal to the QR code metadata then update the status label's text and 
-            // set the bounds
-            let barCodeObject = videoPreviewLayer.transformedMetadataObject(for: metadataObject as AVMetadataMachineReadableCodeObject) as! AVMetadataMachineReadableCodeObject
-            qrCodeFrameView?.frame = barCodeObject.bounds
-            
-            if metadataObject.stringValue != nil {
-                getDictionaryData(scannedQrString: metadataObject.stringValue)
-            }
-        }
+        dismiss(animated: true)
     }
     
-    func getDictionaryData(scannedQrString: String) {
-        guard let inputData = scannedQrString.data(using: String.Encoding.isoLatin1, allowLossyConversion: false),
-            let dictionary = NSKeyedUnarchiver.unarchiveObject(with: inputData) as? [String: NSData] else {
-                return
-        }
-        
-        let titleData = dictionary["titleData"]
-        messageLabel.text = String(data: titleData as! Data, encoding: .utf8)
+    func found(code: String) {
+        print(code)
+        self.ref.child(Constants.TableNames.USERS).child(userId!).child(Constants.UserFields.connections).child(code).setValue(true)
     }
+    
+
+
     
     
     /*
@@ -105,7 +96,9 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+
     }
-    */
+ */
+ 
 
 }

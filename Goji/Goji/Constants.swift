@@ -19,6 +19,7 @@ struct Constants {
         static let SaveCardDetail = "SaveCardDetail"
         static let AddNewCard = "AddNewCard"
         static let CardDetails = "CardDetails"
+        static let BackToMenuFromScan = "BackToMenuFromScan"
     }
     
     struct CardFields {

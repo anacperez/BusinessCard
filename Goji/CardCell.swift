@@ -9,15 +9,13 @@
 import UIKit
 
 class CardCell: UITableViewCell {
-    @IBOutlet weak var firstNameLabel: UILabel!
-    @IBOutlet weak var emailLabel: UILabel!
-    @IBOutlet weak var ratingImageView: UIImageView!
+
+    @IBOutlet weak var nameLabel: UILabel!
     
     var card: Card! {
         didSet {
-            firstNameLabel.text = card.first
-            emailLabel.text = card.email
-            ratingImageView.image = imageForRating(rating: 5)
+            nameLabel.text = card.first! + " " + card.last!
+//            ratingImageView.image = imageForRating(rating: 5)
         }
     }
     
